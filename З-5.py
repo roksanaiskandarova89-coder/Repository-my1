@@ -89,7 +89,19 @@ ttk.Label(root, text="Базовая валюта 2").pack(pady=5)
 base_combo_2 = ttk.Combobox(root, values=list(currencies.keys()), state="readonly")
 base_combo_2.set("USD")
 base_combo_2.pack(pady=2)
+# Целевая валюта
+ttk.Label(root, text="Целевая валюта").pack(pady=5)
+target_combo = ttk.Combobox(root, values=list(currencies.keys()), state="readonly")
+target_combo.set("RUB")
+target_combo.pack(pady=2)
 
+# Кнопка
+btn = ttk.Button(root, text="Получить курс обмена", command=exchange)
+btn.pack(pady=15)
+
+# Результат
+result_label = ttk.Label(root, text="Выберите валюты и нажмите кнопку", justify="center", font=("Arial", 11))
+result_label.pack(pady=5)
 
 
 
