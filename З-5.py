@@ -78,5 +78,20 @@ def exchange():
 root = tk.Tk()
 root.title("Курсы обмена валют")
 root.geometry("350x300")
+# Базовая валюта 1
+ttk.Label(root, text="Базовая валюта 1").pack(pady=5)
+base_combo_1 = ttk.Combobox(root, values=list(currencies.keys()), state="readonly")
+base_combo_1.set("EUR")
+base_combo_1.pack(pady=2)
+
+# Вторая базовая валюта
+ttk.Label(root, text="Базовая валюта 2").pack(pady=5)
+base_combo_2 = ttk.Combobox(root, values=list(currencies.keys()), state="readonly")
+base_combo_2.set("USD")
+base_combo_2.pack(pady=2)
+
+
+
+
 root.mainloop()
 
